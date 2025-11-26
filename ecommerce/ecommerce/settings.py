@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'f8sg0wxvch96wv-!w=r^1zb*bwpew@qj3bqxa8qw_bfnzm^_^='
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 INSTALLED_APPS = [
@@ -60,16 +60,16 @@ TEMPLATES = [
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [ BASE_DIR / 'static' ]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-
 
 
 
 WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 
-# Database example (SQLite for quick start)
+
 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.sqlite3',

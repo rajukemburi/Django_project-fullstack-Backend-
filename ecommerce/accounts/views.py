@@ -21,21 +21,6 @@ def register(request):
 
 
 
-# def user_login(request):
-#     if request.method == 'POST':
-#         username = request.POST.get('username')
-#         password = request.POST.get('password')
-#         user = authenticate(request, username=username, password=password)
-#         if user is not None:
-#             login(request, user)
-#             return redirect('product-list')
-#             # next_url = request.GET.get('next', '/')
-#             # return redirect(next_url) 
-#         else:
-#             messages.error(request, 'Invalid credentials')
-#         return render(request, 'accounts/login.html')
-
-
 
 def user_login(request):
     if request.method == 'POST':

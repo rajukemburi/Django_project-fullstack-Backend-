@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Login</h2>
-<form method="post" >{% csrf_token %}
-    <div class="form-group">
+
+<form method="post" style=" margin-top: 150px; background-color: whitesmoke;margin-left: 10rem; padding-top: 30px; padding-bottom: 30px; width: 700px; padding-left: 180px; border-radius: 20px; box-shadow: 00px 0px 5px black;">{% csrf_token %}
+    <h2 style="margin-left: 110px;">Sign in</h2> 
+    <div class="form-group" style="margin-top: 20px;">
       <label>Username</label>
-      <input type="text" name="username" class="form-control">
+      <input type="text" name="username" class="form-control"  style="width: 20rem; border-radius: 20px; box-shadow: 0px 0px 5px black;">
     </div>
     <div class="form-group">
       <label>Password</label>
-      <input type="password" name="password" class="form-control">
+      <input type="password" name="password" class="form-control" style="width: 20rem; border-radius: 20px; box-shadow: 0px 0px 5px black;">
     </div>
-    <button class="btn btn-primary">Login</button>
+    <button class="btn btn-primary" style="margin-left: 80px; padding-left: 50px; padding-right: 50px; border-radius: 20px; box-shadow: 0px 0px 5px black;  ">Login</button>
 </form>
 {% endblock %}
