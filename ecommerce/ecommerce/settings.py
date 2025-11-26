@@ -1,7 +1,9 @@
 # settings.py (excerpts) - update SECRET_KEY and DB settings for production
-from pathlib import Path
 import os
+from pathlib import Path
 import dj_database_url
+
+
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -92,3 +94,15 @@ USE_TZ = True
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+
+
+
+if 'RENDER' in os.environ:
+    DEBUG = False
+    ALLOWED_HOSTS = [ os.environ.get('RENDER_EXTERNAL_HOSTNAME') ]
+
+    DATABASES = {
+        'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+    }
